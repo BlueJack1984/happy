@@ -31,6 +31,7 @@ public class IssueOne {
         for(long i = 0; i < count; i ++) {
             b --;
         }
+        //使用线程的join方法，要求线程thread执行完毕之后才能执行下面语句
         thread.join();
         long time = System.currentTimeMillis() - start;
         System.out.println("concurrency:" + time + " ms, b = " + b);
